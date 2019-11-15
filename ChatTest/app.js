@@ -4,6 +4,8 @@ var http = require('http').Server(app);
 // passa o http-server par ao socketio
 var io = require('socket.io')(http);
 
+const port = process.env.PORT || 3000
+
 var count = 0;
 
 // cria uma rota para fornecer o arquivo index.html
@@ -34,6 +36,6 @@ io.on('connection', function (socket) {
 });
 
 // inicia o servidor na porta informada, no caso vamo iniciar na porta 3000
-http.listen(443, function () {
+http.listen(port, function () {
     console.log('Servidor rodando em: http://localhost:3000');
 });
