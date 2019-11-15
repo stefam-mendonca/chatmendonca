@@ -34,6 +34,6 @@ io.on('connection', function (socket) {
 });
 
 // inicia o servidor na porta informada, no caso vamo iniciar na porta 3000
-http.listen(3000, function () {
+http.listen(8080, function () {
     console.log('Servidor rodando em: http://localhost:3000');
 });
